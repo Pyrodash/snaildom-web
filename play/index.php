@@ -33,7 +33,7 @@ $mysql = new mysqli($host, $user, $pass, $db);
 
 					function reloadGame() {
 						const el = document.getElementById("game");
-						const path = 'snaildom/gs/snaildom.swf?c=' + Math.floor(new Date().getTime() / 1000) + '&worldId=1';
+						const path = '<?php echo play_url('snaildom/gs/snaildom.swf?c=' . time()) ?>';
 						const params = { allowScriptAccess: 'always' };
 						el.innerHTML = "";
 
@@ -43,7 +43,7 @@ $mysql = new mysqli($host, $user, $pass, $db);
 					}
 					function snaildomLoaded() {
 						if(getQueryParam('create') == 1)
-							document.getElementById('game').startCreator();
+							$('game')[0].startCreator();
 					}
 
 					$(document).ready(function() {

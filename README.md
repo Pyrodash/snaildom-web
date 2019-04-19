@@ -17,15 +17,15 @@ This repository contains the web, API and game files for Snaildom. This was very
 ### Installation
 
 1. Import the database if you haven't already. (Should be in the [emulator's repo](https://github.com/Pyrodash/snaildom))
-2. Add a new site to Google Recaptcha using Google Recaptcha v3. You can do that through the [Google Recaptcha Admin Console](https://www.google.com/recaptcha/admin/) (use `localhost` if you're using your local computer)
-3. Navigate to `snaildom-web/snaildom/play/api` and edit the `config.php`. Change the database settings to match the emulator's and update the recaptcha secret & private keys with the ones you got after adding your site through the Google Recaptcha Admin Console.
+2. Add a new site to Google Recaptcha using Google Recaptcha v3. You can do that through the [Google Recaptcha Admin Console](https://www.google.com/recaptcha/admin/) (use `localhost` as a domain if you're using your local computer)
+3. Navigate to `play/api` and edit the `config.php`. Change the database settings to match the emulator's and update the recaptcha secret & private keys with the ones you got after adding your site through the Google Recaptcha Admin Console.
 4. Update the `baseURL` and `playURL` constants with wherever you're hosting the media.
 
 E.g. If the website was on snaildom.com and the play page was on play.snaildom.com, `baseURL` would be `http://snaildom.com` and `playURL` would be `http://play.snaildom.com`. Don't forget to use `https://` instead of `http://` if you're using SSL!
 
-5. Navigate to `snaildom-web/play` and edit the `config.json`. You only need to change the host to wherever your play page is. E.g. `http://play.snaildom.com`
+5. Navigate to `play/` and edit the `config.json`. You only need to change the host to wherever your play page is. E.g. `http://play.snaildom.com`
 
-**Note:** The .FLA files used to modify the game (a dependency called `rewritten.swf` for everything game-related including the server selection, `snaildom.swf` the game's loader and container, and a dependency called `rewritten_create.swf` used to make the register functioning) are located in `snaildom-web/play/snaildom/gs/edited`. Make sure to delete them before going into production if you don't want people to find the decompiled files on your website.
+**Note:** The .FLA files used to modify the game (a dependency called `rewritten.swf` for everything game-related including the server selection, `snaildom.swf` the game's loader and container, and a dependency called `rewritten_create.swf` used to make the register functioning) are located in `play/snaildom/gs/edited`. Make sure to delete them before going into production if you don't want people to find the decompiled files on your website.
 
 
 Special thanks to **ShawnTD/Reed** for his assistance in compiling the Snaildom files and modifying them.
