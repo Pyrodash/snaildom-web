@@ -1,12 +1,15 @@
 <?php
 	class MySQLIExtension {
 		private $mysqli;
+		
 		function __construct() {
 			$h = "127.0.0.1";
 			$u = "root";
 			$p = "";
-			$d = "snaildom";
+			$d = "snaildom2";
+			
 			$this->mysqli = new mysqli($h, $u, $p, $d);
+			
 			if(mysqli_connect_errno()) {
 				die("Error in database.".mysqli_connect_errno());
 			}
@@ -30,5 +33,6 @@
 			return $this->mysqli->real_escape_string($str);
 		}
 	}
+	
 	$MYSQL = new MySQLIExtension();
 ?>
