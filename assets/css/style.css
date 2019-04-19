@@ -159,3 +159,8 @@ li {
 #post {
 	padding-bottom: 50px;
 }
+
+.grecaptcha-badge {
+	/* Hide the recaptcha v3 badge (optional) */
+	display: none !important;
+}
