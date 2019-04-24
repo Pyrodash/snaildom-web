@@ -1,0 +1,22 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
+
+// Don't forget to use https:// instead of http:// if you're using SSL
+// Base url to your website WITH trailing slash
+$config['base_url'] = 'http://site.com/';
+
+// Media folder url WITH trailing slash
+$config['game_url'] = 'http://site.com/media/';
+
+// Recaptcha config
+$config['recaptcha_site_key'] = 'site key';
+$config['recaptcha_secret_key'] = 'secret key';
+
+// Shown on the help page
+$config['support_email'] = 'help@snaildom.com';
+
+// Don't change the redis config unless you know what you're doing
+$config['redis_host'] = '127.0.0.1';
+$config['redis_port'] = '6379';
+
+$config['registration_cooldown'] = 3;
+$config['max_registrations'] = 3;
