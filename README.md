@@ -22,7 +22,7 @@ You should use whichever version that supports your PHP version. If you're using
 #### Automatic
 Run `pecl install redis` in the terminal.
 #### Manual (Windows)
-1. Download it from the [PECL website]((https://pecl.php.net/package/redis) (the thread safe one)
+1. Download it from the [PECL website](https://pecl.php.net/package/redis) (the thread safe one)
 2. Extract the `php_redis.dll` to `XAMPP folder/php/ext/`.
 3. Open `XAMPP folder/php/php.ini` in notepad.
 4. Add this in a new line anywhere in the file (preferably after the last extension in the list):
