@@ -11,3 +11,5 @@ application/logs/*
 
 application/config/snaildom.php
 application/config/database.php
+
+system/cache/*
