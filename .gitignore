@@ -1,5 +1,7 @@
 html/media/snaildom/api/config.php
 html/uploads/*
+!html/uploads/index.html
+!html/uploads/images/index.html
 
 application/cache/*
 !application/cache/index.html
@@ -13,3 +15,4 @@ application/config/snaildom.php
 application/config/database.php
 
 system/cache/*
+!system/cache/index.html
