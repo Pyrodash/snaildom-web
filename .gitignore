@@ -1,6 +1,10 @@
 html/media/snaildom/api/config.php
+
 html/uploads/*
 !html/uploads/index.html
+!html/uploads/images/
+
+html/uploads/images/*
 !html/uploads/images/index.html
 
 application/cache/*
