@@ -41,7 +41,7 @@ For PHP 7:
 6. In `application/config`, rename `database.php.sample` to `database.php`. Change the database settings to match the emulator's.
 7. If you are on Linux, the permissions for the html/uploads folder should be 755. (i.e. `chmod 755 html/uploads`);
 8. Navigate to `html/media/` and edit the `config.json`. You only need to change the host to the URL to your media files. E.g. `http://localhost/snaildom/media` (This should be the same as the media url in the snaildom.php config file. Trailing slash is optional here)
-9. If you are using NGINX as a web server, add the following code to the server block in your virtual hosts to enable pretty URLs:
+9. If you are using NGINX as a web server, add the following code to the server block in your virtual host to enable pretty URLs:
 ```
 location / {
     index  index.html index.htm index.php;
