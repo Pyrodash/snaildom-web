@@ -17,6 +17,7 @@ $config['support_email'] = 'help@snaildom.com';
 // Don't change the redis config unless you know what you're doing
 $config['redis_host'] = '127.0.0.1';
 $config['redis_port'] = '6379';
+$config['redis_pass'] = ''; // Leave this empty if you don't have a password set
 
 $config['registration_cooldown'] = 3;
 $config['max_registrations'] = 3;

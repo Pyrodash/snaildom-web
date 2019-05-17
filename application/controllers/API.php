@@ -78,11 +78,19 @@ class API extends CI_Controller {
 
     $redisHost = $this->config->item('redis_host');
     $redisPort = $this->config->item('redis_port');
+    $redisPass = $this->config->item('redis_pass');
+
+    $options = [
+      'parameters' => []
+    ];
+
+    if(!empty($redisPass))
+      $options['parameters']['password'] = $redisPass;
 
     $redis = new Predis\Client([
       'host' => $redisHost,
       'port' => $redisPort
-    ]);
+    ], $options);
 
     $servers = $redis->get('servers');
     $servers = json_decode($servers);
