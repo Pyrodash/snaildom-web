@@ -1,5 +1,5 @@
 <?php
-class API extends CI_Controller {
+class Api extends CI_Controller {
   public function __construct() {
     parent::__construct();
 
@@ -74,9 +74,15 @@ class API extends CI_Controller {
 
     $redisHost = $this->config->item('redis_host');
     $redisPort = $this->config->item('redis_port');
+    $redisPass = $this->config->item('redis_pass');
 
     $redis = new Redis();
     $redis->connect($redisHost, $redisPort);
+
+    if(!empty($redisPass)) {
+      if($redis->auth($redisPass) !== TRUE)
+        return $this->respond();
+    }
 
     $servers = $redis->get('servers');
     $servers = json_decode($servers);

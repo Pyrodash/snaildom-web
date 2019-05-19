@@ -143,6 +143,8 @@ class Create extends CI_Controller {
 
     if(!array_key_exists($color, $colors))
       $color = '1';
+    if(empty($email))
+      $email = '';
 
     $password = password_hash($password, PASSWORD_DEFAULT);
     $shell = $colors[$color];

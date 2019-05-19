@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-require_once APPPATH . '/third_party/htmlpurifier/library/HTMLpurifier.auto.php';
+require_once APPPATH . 'third_party/htmlpurifier/library/HTMLPurifier.auto.php';
 
 class CI_Purifier {
   public function __construct() {
