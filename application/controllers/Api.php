@@ -25,7 +25,7 @@ class Api extends CI_Controller {
     if(empty($username) || empty($password) || empty($captcha))
       $this->respond();
 
-    $User = $this->user_model->fetch_user_by('Username', $username, 'ID, Username, Password, Friends');
+    $User = $this->user_model->fetch_user_by('Username', $username, 'ID, Username, Password, Rank, Friends');
 
     if(empty($User))
       $this->respond(2);
@@ -88,7 +88,19 @@ class Api extends CI_Controller {
     $servers = json_decode($servers);
     $buddies = explode(',', $User->Friends);
 
-    foreach($servers as &$server) {
+    foreach($servers as $key => &$server) {
+      if(isset($server->rank)) {
+        $serverRank = $server->rank;
+
+        if(!empty($serverRank) && $serverRank != '*') {
+          if($User->Rank < $serverRank) {
+            unset($servers->$key);
+
+            continue;
+          }
+        }
+      }
+
       $server->users = $redis->get($server->id . '.population');
 
       $players = $redis->get($server->id . '.players');
